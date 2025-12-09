@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environments
+.venv/
+.env
+
+# OS Files
+.DS_Store
+
+# Logs
+*.log
+
+#trial documents
+trial_documents/
+
+# Cache files
+cache.json
+
+# Temporary files
+*.tmp
+
+# coverage files
+.coverage
+htmlcov/
+
+# IDE files
+.vscode/
+
