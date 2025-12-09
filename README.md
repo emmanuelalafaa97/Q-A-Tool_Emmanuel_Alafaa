@@ -1,6 +1,5 @@
-# Q-A-Tool_Emmanuel_Alafaa
-Capstone Project: The Intelligent Q&amp;A chatbot/Tool 
 # LLM Client for Document Processing and Q&A
+## Capstone Project: The Intelligent Q&amp;A chatbot/Tool 
 
 This project provides a Python client for interacting with Large Language Models (LLMs), specifically the Gemini API, to perform various natural language processing tasks. It's designed to handle different document types, provide question-answering capabilities with caching, and extract key entities from text.
 
