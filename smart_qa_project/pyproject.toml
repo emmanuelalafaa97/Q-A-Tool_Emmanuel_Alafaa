@@ -1,0 +1,28 @@
+[project]
+name = "smart-qa-project"
+version = "0.1.0"
+description = "A smart question and answer chatbot"
+authors = [
+    {name = "Manuel A",email = "manuel.alafaa@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pypdf2 (>=3.0.1,<4.0.0)",
+    "google-generativeai (>=0.8.5,<0.9.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "beautifulsoup4 (>=4.14.3,<5.0.0)",
+    "pandas (>=2.3.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "pytest-mock (>=3.15.1,<4.0.0)"
+]
