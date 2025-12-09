@@ -28,7 +28,8 @@ Ensure to keep your credentials secure, API keys are not hard-coded in the proje
 
 ### 2. Install Dependencies
 
-Install the necessary Python libraries:
+Install the necessary Python libraries: 
+You can either use pip as shown below or poetry as shown in poetry.toml file
 
 ```bash
 pip install PyPDF2 pandas requests beautifulsoup4 google-generativeai httpx
