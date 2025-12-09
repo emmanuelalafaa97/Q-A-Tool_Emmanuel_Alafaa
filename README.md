@@ -21,16 +21,10 @@ This project provides a Python client for interacting with Large Language Models
 ## Setup
 
 ### 1. API Key Configuration
+This project uses the Gemini API for generating responses, but it is designed to be flexible and can work with any LLM provider of your choice (e.g., OpenAI, Anthropic, Groq).
 
-This project uses the Gemini API. You need to obtain an API key from Google AI Studio. Once you have your key, store it securely in Google Colab's Secrets Manager under the name `Googlechat_bot_api_key`.
+Ensure to keep your credentials secure, API keys are not hard-coded in the project.
 
-```python
-import google.generativeai as genai
-import os
-from dotenv import load_dotenv
-
-genai.configure(api_key=os.getenv('Googlechat_bot_api_key'))
-```
 
 ### 2. Install Dependencies
 
@@ -89,7 +83,7 @@ You can summarize text from various file types using the `summarize` method of t
 
 ```python
 llm_client_instance = LLMClient(format='pdf')
-summary_text = llm_client_instance.summarize('/content/drive/MyDrive/Caching APIs/Trial_files/ARIN-CALL-FOR-INTERNSHIP-APPLICATIONS-2026.pdf', 'pdf')
+summary_text = llm_client_instance.summarize('file-name.json', 'json')
 print(summary_text)
 ```
 
@@ -101,7 +95,7 @@ print(summary_text)
 def summarize_pdf(filepath: str) -> str:
     # ... (function body as in your notebook)
 
-summarized_content = summarize_pdf('/content/drive/MyDrive/Caching APIs/Trial_files/ARIN-CALL-FOR-INTERNSHIP-APPLICATIONS-2026.pdf')
+summarized_content = summarize_pdf('file-name.pdf')
 print(summarized_content)
 ```
 
@@ -111,7 +105,7 @@ Extract key entities from a document using the `extract_entities` method.
 
 ```python
 llm_client_instance = LLMClient(format='pdf')
-entities = llm_client_instance.extract_entities('/content/drive/MyDrive/Caching APIs/Trial_files/ARIN-CALL-FOR-INTERNSHIP-APPLICATIONS-2026.pdf', 'pdf')
+entities = llm_client_instance.extract_entities('file-name.pdf', 'pdf')
 print(entities)
 ```
 
